@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="futureloan" >
+    <test name="注册接口">
+        <classes>
+            <class name="com.lemon.cases.RegisterCase_finally"></class>
+            <parameter name="sheetIndex" value="0"></parameter>
+        </classes>
+    </test>
+
+    <test name="登录接口">
+        <classes>
+            <class name="com.lemon.cases.LoginCase"></class>
+            <parameter name="sheetIndex" value="1"></parameter>
+        </classes>
+    </test>
+
+    <test name="普通用户信息">
+        <classes>
+            <class name="com.lemon.cases.UserInfoCase"></class>
+            <parameter name="sheetIndex" value="7"></parameter>
+        </classes>
+    </test>
+
+    <test name="充值接口">
+        <classes>
+            <class name="com.lemon.cases.RechargeCase"></class>
+            <parameter name="sheetIndex" value="2"></parameter>
+        </classes>
+    </test>
+
+    <test name="新增项目接口">
+        <classes>
+            <class name="com.lemon.cases.AddCase"></class>
+            <parameter name="sheetIndex" value="3"></parameter>
+        </classes>
+    </test>
+
+    <!--管理员登录 不需要新增类,同接口不同用例，直接tesng加一个就行-->
+    <test name="管理员登录接口">
+    <classes>
+        <class name="com.lemon.cases.LoginCase"></class>
+        <parameter name="sheetIndex" value="4"></parameter>
+    </classes>
+</test>
+
+    <test name="审核项目接口">
+        <classes>
+            <class name="com.lemon.cases.AuditCase"></class>
+            <parameter name="sheetIndex" value="5"></parameter>
+        </classes>
+    </test>
+
+    <test name="投资接口">
+        <classes>
+            <class name="com.lemon.cases.InvestCase"></class>
+            <parameter name="sheetIndex" value="6"></parameter>
+        </classes>
+    </test>
+
+    <!--用户信息用例放在普通用户用例下，获取的是普通用户的member_id,放在管理员下。。-->
+    <test name="管理员用户信息">
+        <classes>
+            <class name="com.lemon.cases.UserInfoCase"></class>
+            <parameter name="sheetIndex" value="7"></parameter>
+        </classes>
+    </test>
+
+</suite>
